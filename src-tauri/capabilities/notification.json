@@ -1,0 +1,14 @@
+{
+  "identifier": "notification-interceptor",
+  "description": "Android通知拦截器权限配置",
+  "context": "default",
+  "windows": ["main"],
+  "permissions": [
+    "notification_interceptor:default",
+    "notification_interceptor:request_notification_permission",
+    "notification_interceptor:check_notification_permission",
+    "requestNotificationPermission",
+    "checkNotificationPermission",
+    "initializeNotificationListener"
+  ]
+} 

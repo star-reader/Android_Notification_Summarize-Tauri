@@ -12,13 +12,15 @@
   "app": {
     "windows": [
       {
-        "title": "tauri-app",
+        "title": "Android 通知拦截器",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "label": "main"
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "capabilities": ["notification-interceptor"]
     }
   },
   "bundle": {
@@ -31,5 +33,14 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
+  },
+  "plugins": {
+    "notification_interceptor": {
+      "android": {
+        "permissions": [
+          "android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        ]
+      }
+    }
   }
 }

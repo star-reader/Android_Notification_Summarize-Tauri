@@ -34,7 +34,11 @@
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: 0.75s;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .logo.tauri:hover {
@@ -44,6 +48,9 @@
 .row {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 a {
@@ -113,4 +120,151 @@ button {
   button:active {
     background-color: #0f0f0f69;
   }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* 通知拦截器样式 */
+.notification-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.notification-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.notification-section button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.notification-section button:hover {
+  background: #0056b3;
+}
+
+.notifications-list {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.notifications-list h2 {
+  text-align: center;
+  color: #333;
+}
+
+.notifications-container {
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.notification-item {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  background: white;
+  transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+  background: #f8f9fa;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.app-name {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.category {
+  background: #6c757d;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.timestamp {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.notification-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.notification-content {
+  color: #666;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.row input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.row button {
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.row button:hover {
+  background: #218838;
 }
